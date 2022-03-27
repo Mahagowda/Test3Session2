@@ -1,9 +1,5 @@
- pwd
-/home/runner/Test3Session2-1
- gcc -g p2final.c -lm
- gdb./a.out
-bash: gdb./a.out: No such file or directory
- gcc -g p2final.c -lm
+/home/runner/Test3Session2
+ gcc -g p2final.c
  gdb ./a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -23,30 +19,29 @@ Reading symbols from ./a.out...done.
 (gdb) b main
 Breakpoint 1 at 0x8a3: file p2final.c, line 34.
 (gdb) r
-Starting program: /home/runner/Test3Session2-1/a.out 
+Starting program: /home/runner/Test3Session2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
 Breakpoint 1, main () at p2final.c:34
-34    f1=input_fraction();
+34  f1=input_fraction();
 (gdb) n
 enter the fraction
-2
 3
-35    f2=input_fraction();
-(gdb) 4
-Undefined command: "4".  Try "help".
-(gdb) n
-enter the fraction
 4
-5
-36    f3=input_fraction();
+35  f2=input_fraction();
 (gdb) n
 enter the fraction
+5
 6
+36  f3=input_fraction();
+(gdb) n
+enter the fraction
 7
-37    smallest=smallest_fraction(f1,f2,f3);
+8
+37  smallest=smallest_fraction(f1,f2,f3);
 (gdb) n
-38    output(f1,f2,f3,smallest);
+38  output(f1,f2,f3,smallest);
 (gdb) n
-the smallest of23,45,67 is  23
-39    return 0;
+the smallest of34,56,78 is  34
+39  return 0;
+(gdb)
