@@ -16,90 +16,29 @@ For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from ./a.out...done.
 (gdb) b main
-Breakpoint 1 at 0x775: file p4final.c, line 4.
-(gdb) 
-Note: breakpoint 1 also set at pc 0x775.
-Breakpoint 2 at 0x775: file p4final.c, line 4.
+Breakpoint 1 at 0x9ba: file p4final.c, line 38.
 (gdb) r
-Starting program: /home/runner/Test3Session2-4/a.out 
+Starting program: /home/runner/Test3Session2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
-Breakpoint 1, main () at p4final.c:4
-4   {
+Breakpoint 1, main () at p4final.c:38
+38  {
 (gdb) n
-5   float a[100],sum=0,x;
+39  int n= input_degree();
 (gdb) n
-7   printf("\nEnter degree of the polynomial X :: ");
+input degree?
+ 1 1 1
+40  float x=input_x();
 (gdb) n
-
-8   scanf("%d",&n);
+41  float ar[n];
 (gdb) n
-Enter degree of the polynomial X :: 3
-9   printf("\nEnter coefficient's of the polynomial X :: \n");
+42  input_coefficent(n,ar);
 (gdb) n
-
-Enter coefficient's of the polynomial X :: 
-10  for(i=n;i>=0;i--)
-(gdb) m
-Ambiguous command "m": macro, maintenance, make, mem, monitor, mt.
-(gdb) n
-12  printf("\nEnter Coefficient of [ X^%d ] :: ",i);
+enter x?input 2 coefficents-
+n
+43  output(n,ar,x,evaluate_polynomial(n,ar,x));
 (gdb) n
 
-13  scanf("%f",&a[i]);
-(gdb) n
-Enter Coefficient of [ X^3 ] :: 1
-10  for(i=n;i>=0;i--)
-(gdb) n
-12  printf("\nEnter Coefficient of [ X^%d ] :: ",i);
-(gdb) n
-
-13  scanf("%f",&a[i]);
-(gdb) n
-Enter Coefficient of [ X^2 ] :: 3
-10  for(i=n;i>=0;i--)
-(gdb) n
-12  printf("\nEnter Coefficient of [ X^%d ] :: ",i);
-(gdb) n
-
-13  scanf("%f",&a[i]);
-(gdb) n
-Enter Coefficient of [ X^1 ] :: 2
-10  for(i=n;i>=0;i--)
-(gdb) n
-12  printf("\nEnter Coefficient of [ X^%d ] :: ",i);
-(gdb) n
-
-13  scanf("%f",&a[i]);
-(gdb) n
-Enter Coefficient of [ X^0 ] :: 5
-10  for(i=n;i>=0;i--)
-(gdb) n
-15  printf("\nEnter the value of X :: ");
-(gdb) n
-
-16  scanf("%f",&x);
-(gdb) n
-Enter the value of X :: 4
-17  for(i=n;i>0;i--)
-(gdb) n
-19  sum=(sum+a[i])*x;
-(gdb) n
-17  for(i=n;i>0;i--)
-(gdb) n
-19  sum=(sum+a[i])*x;
-(gdb) n
-17  for(i=n;i>0;i--)
-(gdb) n
-19  sum=(sum+a[i])*x;
-(gdb) n
-17  for(i=n;i>0;i--)
-(gdb) n
-21  sum=sum+a[0];
-(gdb) n
-22  printf("\nValue of the polynomial is = [ %f]\n",sum);
-(gdb) n
-
-Value of the polynomial is = [ 125.000000]
-23  return 0;
-(gdb)
+1.000000 x^1 +0.000000,at x=1.000000
+=1.000000
+44  }
