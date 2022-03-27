@@ -1,4 +1,4 @@
- gcc -g p3final.c
+  gcc -g p3final.c
  gdb ./a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -18,23 +18,24 @@ Reading symbols from ./a.out...done.
 (gdb) b main
 Breakpoint 1 at 0x873: file p3final.c, line 30.
 (gdb) r
-Starting program: /home/runner/Test3Session2-4/a.out 
+Starting program: /home/runner/Test3Session2/a.out 
 warning: Error disabling address space randomization: Operation not permitted
+n
 
 Breakpoint 1, main () at p3final.c:30
 30  {
 (gdb) n
-32    input_n_and_r(&n,&r);
+32   input_n_and_r(&n,&r);
 (gdb) n
 enter the total number of objects and the number of objects you choosen
 4 2
-33    result= ncr(n,r);
+33   result= ncr(n,r);
 (gdb) n
-34    output(n,r,result);
+34   output(n,r,result);
 (gdb) n
-35    return 0;
+35   return 0;
 (gdb) n
 36  }(gdb) c
 Continuing.
-the combination of 4 and 2 is 6[Inferior 1 (process 34) exited normally]
+the combination of 4 and 2 is 6[Inferior 1 (process 397) exited normally]
 (gdb)
