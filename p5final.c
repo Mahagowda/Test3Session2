@@ -17,7 +17,6 @@ void init_array(int n, int a[n])
 void ets(int n, int a[n])
 {
   int i=0;
-   /* Find next non-zero number */
   while(i<sqrt(n)){
    for(;a[i]==0 ;i++);
    for(int k=i+i;k<n;k += i)
